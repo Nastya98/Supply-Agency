@@ -1,0 +1,320 @@
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	letter-spacing: 1.5px
+	transition: all 0.3s
+a
+	text-decoration: none
+li
+	list-style-type: none
+html
+	font-size: 16px
+.btn
+	outline: none
+	border: none
+	background-color: transparent
+	padding: .9rem 2.3rem
+	text-transform: uppercase
+	font-family: Roboto
+	font-style: normal
+	font-weight: 500
+	font-size: .8125rem
+	cursor: pointer
+%font-family-Roboto
+	font-family: 'Roboto', sans-serif
+	font-style: normal
+%font-family-TGStand
+	font-family: 'TitlingGothicFBSky-Stand', sans-serif
+	font-style: normal
+%font-family-TGReg
+	font-family: 'TitlingGothicFBSky-Reg', sans-serif
+	font-style: normal
+%d-flex
+	display: flex
+	justify-content: space-between
+.wrapper
+	max-width: 1200px
+	margin: 0 auto
+.header
+	background-color: #0c1830
+	.navigation-bar
+		position: fixed
+		width: 100%
+		z-index: 9999
+		background-color: #0c1830
+		.header-navigation
+			@extend %d-flex
+			.header-item
+				display: flex
+				width: 50%
+				text-transform: uppercase
+				color: #e1e2e6
+				&:nth-child(2)
+					width: 40%
+				.logo-wrapper
+					img
+						height: 100%
+						margin-right: 2rem
+				.container-control
+					display: flex
+					flex-direction: column
+					justify-content: space-around
+					width: 100%
+					.header-title
+						@extend %font-family-TGStand
+						font-weight: 400
+						color: #fff
+				&:nth-child(2) .container-control
+					align-items: flex-end		
+.main-menu-wrapper, .addition-menu-wrapper
+	width: 100%
+	.main-menu, .addition-menu
+		@extend %d-flex
+		li
+			a
+				@extend %font-family-Roboto
+				color: #e1e2e6
+				font-weight: 400
+				font-size: 0.8125rem
+.container-control
+	.addition-menu-wrapper
+		.addition-menu
+			li
+				a
+					font-size: 0.6875rem
+					color: rgba(255, 255, 255, 0.7)
+	.form-search
+		width: 100%
+		.input-field
+			width: 100%
+			position: relative
+			input[type=text]
+				font-weight: 400
+				width: 100%
+				border-bottom: 1px solid rgba(255, 255, 255, 0.7)
+				visibility: hidden
+				padding: 0
+				color: #fff
+				&:focus + label
+					display: none
+			label
+				@extend %font-family-Roboto
+				font-weight: 400
+				font-size: 0.8125rem
+				position: absolute
+				top: 1px
+				right: 0
+				cursor: pointer
+				.icon-search
+					margin-right: .75rem
+.header-slider
+	background: url('../img/slider.png') no-repeat center center
+	background-size: cover
+	position: relative
+	padding-top: 7.5rem
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background-image: linear-gradient(to bottom ,rgba(0, 0, 0, 0.0001),rgba(0, 0, 0, 0.7873))
+		opacity: 0.57
+	.slider
+		padding: 6.375rem 0 8.75rem 0
+	.slider-item
+		outline: none
+		color: #fff
+		.content-item
+			max-width: 29.375rem
+			margin-bottom: 10.3rem
+			h1
+				@extend %font-family-TGReg
+				text-transform: uppercase
+				font-size: 4.25rem
+				line-height: 4.875rem
+				font-weight: 400
+				letter-spacing: 4.49846px
+				margin-bottom: 2.3rem
+			p
+				@extend %font-family-Roboto
+				font-weight: 300
+				line-height: 1.75rem
+				font-size: .9375rem
+				letter-spacing: -0.228571px
+				margin-bottom: 1.4rem
+			.header-btn
+				border: 1px solid #fff
+				color: #fff
+				.angile-right
+					margin-left: 1.125rem
+					img
+						display: inline-block
+				&:hover
+					background-color: rgba(68, 53, 40, .6)
+					border: 1px solid #e4e4e4
+					color: #e6e6e6
+	.header-underline
+		position: absolute
+		padding-bottom: 1rem
+		bottom: 2.6rem
+		border-bottom: 1px solid rgba(216, 216, 216, 0.619)
+		margin-bottom: 7.2rem
+		min-width: 13.5rem
+		p
+			@extend %font-family-Roboto
+			font-weight: 300
+			letter-spacing: -0.2px
+			font-size: .875rem
+			color: rgba(255, 255, 255, 0.5)
+.slick-dots
+	@extend %font-family-Roboto
+	cursor: pointer
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	font-weight: 300
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+	padding-bottom: .6rem
+	margin-bottom: 1rem
+	li
+		position: relative
+		margin: 0 .59rem
+		a
+			@extend %font-family-Roboto
+			font-weight: 300
+			font-size: .75rem
+			color: rgba(255, 255, 255, 0.7353)
+	.slick-active
+		border: 1px solid #FFF8F8
+		border-radius: 50%
+		margin: 0
+		height: 1.625rem
+		width: 1.625rem
+		a
+			font-weight: 600
+			position: absolute
+			top: 25%
+			left: 37%
+.features
+	background-color: #e7e2de
+	height: 27.5rem
+.features-container
+	display: flex
+	margin-top: -6.875rem
+	.features-item
+		width: 33.3%
+		min-height: 13.75rem
+		text-align: center
+		padding: 2.4rem 0
+		position: relative
+		&:nth-child(1)
+			background: url("../img/feature01.jpg") no-repeat center center
+			background-size: cover
+		&:nth-child(2)
+			background: url("../img/feature02.jpg") no-repeat center center
+			background-size: cover
+		&:nth-child(3)
+			background: url("../img/feature03.jpg") no-repeat center center
+			background-size: cover
+		.feature-title
+			@extend %font-family-TGReg
+			color: #fff
+			text-transform: uppercase
+			font-size: 2.18rem
+			letter-spacing: 2.32px
+			font-weight: 400
+		.feature-inner
+			@extend %font-family-Roboto
+			position: absolute
+			top: 51%
+			left: 5%
+			background-color: #FEFDFD
+			color: black
+			font-size: .875rem
+			width: 90%
+			padding: 1.18rem 2.56rem 2.1rem 2.56rem
+			.feature-inner-counter
+				font-family: inherit
+				font-weight: bold
+				color: #0C182F
+				position: relative
+				display: inline-block
+				&:before, &:after
+					content: ''
+					position: absolute
+					top: 50%
+					background-color: #9C8F72
+					width: 0.75rem
+					height: 1px
+				&:before
+					left: -100%
+				&:after
+					right: -100%	
+			.feature-inner-text
+				font-family: inherit
+				font-weight: 300
+				color: rgba(12, 24, 47, 0.65)
+				font-size: .875rem
+				line-height: 1.625rem
+				margin: 0.66rem 0 1.8rem 0
+				letter-spacing: 0.5px
+			.feature-inner-btn
+				color: #0C182F
+				border: 1px solid #0C182F
+				&:hover
+					background-color: #141A34
+					color: #fff
+.footer
+	background: url('../img/Background.jpg') no-repeat center center
+	background-size: cover 
+	height: 20.4375rem
+	.footer-container
+		@extend %d-flex
+		margin: 0 14.75rem 0 14.8rem
+		padding: 3.1rem 0
+		.footer-column
+			color: #fff
+			.footer-column-item:nth-child(1):not(.footer-last-column-item)
+				@extend %font-family-Roboto
+				font-weight: 400
+				text-transform: uppercase
+				font-size: .8125rem
+				line-height: 1.75rem
+			.footer-column-item:not(:first-child):not(.footer-last-column-item)
+				font-size: .875rem
+				line-height: 2.0625rem
+				a
+					@extend %font-family-Roboto
+					color: #F2F2F2
+					opacity: 0.56
+					font-weight: 300
+		.footer-last-column
+			.footer-last-column-item
+				line-height: 1.8125rem
+				a
+					@extend %font-family-Roboto
+					font-weight: 300
+					font-size: .6875rem
+					color: #fff
+					text-transform: uppercase
+	.footer-copy
+		position: relative
+		padding-top: 1.5rem
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			width: 100%
+			height: 1px
+			background-color: rgba(9, 19, 37, 0.36)
+		.copy-rights
+			@extend %font-family-Roboto
+			font-weight: 300
+			text-align: center
+			font-size: .8125rem
+			line-height: 1.1875rem
+			opacity: 0.56
+			color: #F2F2F2
